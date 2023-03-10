@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import {AiOutlineMail, } from 'react-icons/ai'
+import { BiLoaderCircle } from "react-icons/bi";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -26,23 +28,25 @@ const Contact = () => {
       [name]: value,
     });
   };
+//template_d80yoj7
+//service_jc1gosy
+//APjQzg5S59i82dqDs
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      .send('service_jc1gosy',
+        'template_d80yoj7',
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Aleksandra",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "alexgrubor@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+       'APjQzg5S59i82dqDs'
       )
       .then(
         () => {
@@ -73,7 +77,7 @@ const Contact = () => {
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={'text-[#f1f1f1] font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'}>Contact.</h3>
 
         <form
           ref={formRef}
@@ -87,7 +91,7 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder="What's your name?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -98,7 +102,7 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="What's your email address?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -115,11 +119,21 @@ const Contact = () => {
           </label>
 
           <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+  type="submit"
+  className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+>
+  {loading ? (
+    <>
+      Sending...
+      <BiLoaderCircle className="inline-block pl-1 text-[20px] animate-spin" />
+    </>
+  ) : (
+    <>
+      Send
+      <AiOutlineMail className="inline-block pl-1 text-[20px]" />
+    </>
+  )}
+</button>
         </form>
       </motion.div>
 
