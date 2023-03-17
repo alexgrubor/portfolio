@@ -255,16 +255,14 @@ const testimonials = [
     image: "https://media.licdn.com/dms/image/C4E03AQHZZwBn4jc-5Q/profile-displayphoto-shrink_800_800/0/1517761276213?e=1683763200&v=beta&t=ONtKiTf8c2mpWRdZpfF7eGlw3uupCqodGoonitJ0bTE",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    testimonial:"Working with Aleksandra for the past months has been a pleasure. She is intelligent, patient and very dedicated to learning. Already from the beginning, her skill awarded her the position of class tutor. We also received positive reviews from the tutoring sessions from her peers. Soon we will approach the end of the MERN course, Aleksandra already has the necessary knowledge to become a Junior Developer. I am confident that with her skills and perseverance she will find a successful career in this field, and any company the takes her will benefit from a wonderful colleague.",
+    name: "Matteo Sette",
+    designation: "Teacher",
+    company: "DCI",
+    image: "https://media.licdn.com/dms/image/C4E03AQHyjfWd76Js7w/profile-displayphoto-shrink_100_100/0/1516976833706?e=1684368000&v=beta&t=tkhuowTSTpjMm9FNHchqm2zqGIGdjB3Cnw9DOrIo2ZY",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    testimonial:"Lorem",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
